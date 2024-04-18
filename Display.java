@@ -4,23 +4,24 @@ import javax.swing.JFrame;
 
 public class Display extends Canvas{
 	
-	private static final long serialVersionUID = 1L;
-	static final int WIDTH = 800;
-	static final int HEIGHT = 600;
-	static final String Title = "Game101";
+	static int WIDTH = 800;
+	static int HEIGHT = 600;
+	final static String title = "More Fire ver 1.1";
 
-	
-	public static void main(String[]args) {
-		
-		JFrame frame = new JFrame(Title);
+	public static void main(String[]args){
+		Display game = new Display();
+		JFrame frame = new JFrame();
 
-		frame.setSize(WIDTH, HEIGHT);
+		frame.add(game);
+		frame.setSize(WIDTH,HEIGHT);
+		frame.setTitle(title);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
+
 		frame.setVisible(true);
-		
-		
+
+
 	}
 	
 }
